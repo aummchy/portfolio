@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import personal from "../data/personal";
 
 export default function About() {
   return (
@@ -30,7 +31,8 @@ export default function About() {
             <p className="text-slate-400 leading-relaxed">
               My interest in programming started with solving problems in C++ and
               has evolved into building full-stack web applications using React,
-              Node.js, and modern databases.
+              Node.js, and modern databases. I&apos;m also exploring AI/ML and
+              expanding my skill set every day.
             </p>
           </motion.div>
 
@@ -46,10 +48,10 @@ export default function About() {
                 Education
               </h3>
               <p className="text-slate-300 font-medium">
-                B.Tech Information Technology
+                {personal.degree}
               </p>
               <p className="text-slate-500 text-sm">
-                Walchand College of Engineering, Sangli
+                {personal.college}
               </p>
             </div>
 
@@ -61,6 +63,7 @@ export default function About() {
                 <li>C++ / Data Structures &amp; Algorithms</li>
                 <li>React &amp; Frontend Development</li>
                 <li>Node.js &amp; Backend Development</li>
+                <li>FastAPI &amp; Flask</li>
                 <li>AI/ML fundamentals</li>
               </ul>
             </div>

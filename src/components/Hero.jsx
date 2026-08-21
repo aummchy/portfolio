@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
+import personal from "../data/personal";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-16">
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 pt-16">
       <div className="max-w-3xl mx-auto text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -21,7 +22,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 leading-tight"
         >
-          Aum Choudhary
+          {personal.name}
         </motion.h1>
 
         <motion.h2
@@ -30,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-400 mb-6"
         >
-          Software Engineer
+          {personal.headline}
         </motion.h2>
 
         <motion.p
@@ -39,8 +40,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="text-slate-400 text-lg max-w-xl mx-auto mb-10 leading-relaxed"
         >
-          I build things for the web. Currently focused on full-stack
-          development with React, Node.js, and modern web technologies.
+          I build things for the web and explore AI/ML. Always learning,
+          always growing &mdash; one project at a time.
         </motion.p>
 
         <motion.div
@@ -70,14 +71,18 @@ export default function Hero() {
           className="flex items-center justify-center gap-5"
         >
           <a
-            href="#"
+            href={personal.github}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="GitHub profile"
             className="text-slate-500 hover:text-white transition-colors duration-200"
           >
             <GithubIcon size={22} />
           </a>
           <a
-            href="#"
+            href={personal.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="LinkedIn profile"
             className="text-slate-500 hover:text-white transition-colors duration-200"
           >

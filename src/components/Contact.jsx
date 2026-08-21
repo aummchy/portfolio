@@ -1,25 +1,26 @@
 import { motion } from "framer-motion";
 import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
+import personal from "../data/personal";
 
 const contactLinks = [
   {
     label: "Email",
-    href: "mailto:[your-email]",
+    href: `mailto:${personal.email}`,
     icon: Mail,
-    display: "[your-email]",
+    display: personal.email,
   },
   {
     label: "GitHub",
-    href: "#",
+    href: personal.github,
     icon: GithubIcon,
-    display: "github.com/[your-username]",
+    display: personal.github.replace("https://", ""),
   },
   {
     label: "LinkedIn",
-    href: "#",
+    href: personal.linkedin,
     icon: LinkedinIcon,
-    display: "linkedin.com/in/[your-username]",
+    display: personal.linkedin.replace("https://", ""),
   },
 ];
 
@@ -44,7 +45,7 @@ export default function Contact() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-slate-400 max-w-md mx-auto mb-8"
         >
-          I&apos;m currently looking for internship and placement opportunities.
+          I&apos;m looking forward to new opportunities and collaborations.
           Feel free to reach out if you&apos;d like to connect.
         </motion.p>
 
@@ -61,6 +62,8 @@ export default function Contact() {
               <a
                 key={link.label}
                 href={link.href}
+                target={link.label !== "Email" ? "_blank" : undefined}
+                rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
                 className="flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-800 bg-slate-900/50 text-slate-400 hover:text-white hover:border-slate-700 transition-all duration-200"
               >
                 <Icon size={16} />
