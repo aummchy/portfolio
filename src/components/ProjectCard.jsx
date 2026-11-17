@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.4 }}
-      className="group p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-slate-700 transition-all duration-300"
+      className="group p-6 rounded-xl border border-slate-800 bg-slate-900/50 hover:border-slate-700 transition-colors duration-300"
     >
       <div className="flex items-start justify-between mb-3">
         <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
