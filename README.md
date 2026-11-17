@@ -1,16 +1,40 @@
-# React + Vite
+# Aum Choudhary — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal developer portfolio website: clean, modern, and dark-first. Built with React, Vite, and Tailwind CSS, with motion powered by Framer Motion.
 
-Currently, two official plugins are available:
+### 🔗 Live Site: [aummdev.vercel.app](https://aummdev.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Preview
 
-## React Compiler
+<img src="docs/hero-preview.png" alt="Portfolio hero section — Aum Choudhary, Full-Stack Developer" width="720" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the Oxlint configuration
+- **React 19 + Vite** — fast dev server and optimized production builds
+- **Tailwind CSS v4** — utility-first styling
+- **Framer Motion** — hero entrance, section reveals, hover and nav transitions (respects `prefers-reduced-motion`)
+- **Lucide React** — icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Features
+
+- **Hero** — intro, CTAs, and social links
+- **About** — background, interests, and technologies
+- **Skills** — categorized chips (no percentage bars)
+- **Projects** — reusable cards with tech tags, repo/demo links, and a featured flag
+- **Experience / Education / Achievements** — timeline-style sections
+- **Contact** — direct links (email, GitHub, LinkedIn), no backend form
+- Responsive layout, keyboard accessible, and fast with minimal dependencies
+
+## Project Structure
+
+```
+src/
+├── components/   # Reusable UI components
+├── data/         # projects, skills, personal, achievements data
+├── assets/
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+All content lives in `src/data/` as plain JS, so personal details can be swapped for API calls later without touching the UI components.
